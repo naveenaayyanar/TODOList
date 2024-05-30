@@ -1,0 +1,54 @@
+
+<html>
+   
+    <title>Project 2</title>
+    <head><center> <h1>TODO LIST</h1> </center>
+         <style>
+            h1{
+                font-style: italic;
+                font-stretch:condensed;
+                font-size: 100px;
+                color: rgb(48, 4, 39);
+               
+            }
+            body{
+                color:rgb(241, 244, 247)
+            }
+            .button{
+                font-size: 17px;
+                padding:10px 20px;
+                
+            }
+            ul{
+                font-size: 25px;
+                color: rgb(5, 47, 85);
+            }
+            input{
+                font-size: 25px;
+            }
+
+        </style>
+   
+    </head><body bgcolor="violet"><input id="input">
+<button onclick="add()", class="button">ADD</button>
+<ul id="list">
+    <li>
+        Hello<button onclick="deleteitem(event)",class="button">Delete</button>
+    </li>
+    
+</ul>
+<script>
+    var ul=document.getElementById("list")
+    var input=document.getElementById("input")
+    function add()
+{
+var listitem=document.createElement("li")
+listitem.innerHTML=input.value+"<button onclick='deleteitem(event)'>delete</button>"
+ul.append(listitem)
+}
+function deleteitem(event)
+{
+ event.target.parentElement.remove();
+}
+
+    </script></body></html>
